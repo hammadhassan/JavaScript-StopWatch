@@ -1,0 +1,14 @@
+body {
+    background-color: midnightblue;
+}
+.wrap {
+    margin: 0 auto;
+    border: 2px double midnightblue;
+    width: 200px;
+    height: 500px;
+}
+h1, h2 {
+    font-size: 40px;
+    font-style: oblique;
+    color: snow;
+}

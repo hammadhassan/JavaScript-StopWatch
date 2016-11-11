@@ -21,8 +21,8 @@ function timer() {
 
 start.onclick = timer;
  document.getElementById("start").disabled;
-if (time > 1) {
- 	//document.getElementsByID("start").disabled = true;
+if (timer >= 1) {
+ 	document.getElementsByID("start").disabled = true;
      //document.getElementById("start").disabled = true;
      
 }

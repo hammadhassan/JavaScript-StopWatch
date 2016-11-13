@@ -2,6 +2,9 @@ var sec = 00;
 var min = 00;
 var hour = 00;
 var t;
+function timer() {
+    t = setTimeout(time, 1000);
+}
 function time() {
     if (sec >= 60) {
         sec = 00;
@@ -14,17 +17,20 @@ function time() {
     document.getElementById("timer").innerHTML = (hour + ":" + min + ":" + sec++ );
     timer();
 }
-function timer() {
-    setTimeout(time, 1000);
-} 
+ 
 start.onclick = timer;
-if (timer >= 1) {
- 	document.getElementsByID("start").disabled = true;  
-}
+// if (timer >= 1) {
+//  	document.getElementByID("start").disabled = true;  
+// }
 function stop() {
-     clearTimeout(timer);
+     clearTimeout(t);
 }
+stop.onclick = stop;
+
 function reset() {
-     document.getElementsByTagName("h2") = "00:00:00";
-     sec = 00; min = 00; hour = 00; 
+     clearInterval(t);
+     document.getElementById("timer").innerHTML = "00:00:00";
+     sec = 00; min = 00; hour = 00;
+     
 }
+reset.onclick = reset;

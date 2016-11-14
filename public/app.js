@@ -17,20 +17,12 @@ function time() {
     document.getElementById("timer").innerHTML = (hour + ":" + min + ":" + sec++ );
     timer();
 }
-// document.getElementById("start").disabled = true;
  start.onclick = timer;
- if (document.getElementById("timer").value.length >= 1) {
-    document.getElementById("start").disabled = true;
-}
+ 
 function stop() {
      clearTimeout(t);
 }
 stop.onclick = stop;
-if (document.getElementById("timer").value.length == 0) {
-document.getElementById("stop").disabled = true;
-} else {
-    document.getElementById("stop").disabled = false;
-}
 
 function reset() {
      clearInterval(t);
@@ -38,9 +30,24 @@ function reset() {
      sec = 00; min = 00; hour = 00;  
 }
 reset.onclick = reset;
+/*
+start
+if (document.getElementById("stop").disabled = true ) {
+    document.getElementById("start").disabled = false;
+ } else { 
+     document.getElementById("start").disabled = true;
+}
 
-if (document.getElementById("timer").value.length == 0) {
+stop
+if (document.getElementById("start").disabled = false) {
+    document.getElementById("stop").disabled = true;
+} else {
+    document.getElementById("stop").disabled = true;
+}
+
+reset
+if (document.getElementById("start").disabled = false) {
 document.getElementById("reset").disabled = true;
 } else {
     document.getElementById("reset").disabled = false;
-}
+}*/

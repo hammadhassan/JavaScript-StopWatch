@@ -18,7 +18,14 @@ function time() {
     timer();
 }
  start.onclick = timer;
- 
+if (document.getElementById("stop").disabled == true && document.getElementById("reset").disabled == true) {
+    document.getElementById("start").disabled = false;
+ } else { 
+     document.getElementById("start").disabled = false;
+     document.getElementById("stop").disabled = false;
+     document.getElementById("reset").disabled = false;
+}
+
 function stop() {
      clearTimeout(t);
 }
@@ -32,10 +39,12 @@ function reset() {
 reset.onclick = reset;
 /*
 start
-if (document.getElementById("stop").disabled = true ) {
+if (document.getElementById("stop").disabled = true && document.getElementById("reset").disabled = true) {
     document.getElementById("start").disabled = false;
  } else { 
      document.getElementById("start").disabled = true;
+     document.getElementById("stop").disabled = false;
+     document.getElementById("reset").disabled = false;
 }
 
 stop
